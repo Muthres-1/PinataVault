@@ -42,15 +42,15 @@
 ## 7. Start the Development Server
       npm start
       
-###Deployment
-##1. Deploy Smart Contracts
-##2. Ensure the blockchain is running locally. Use the following command to deploy the smart contracts:
+### Deployment
+## 1. Deploy Smart Contracts
+## 2. Ensure the blockchain is running locally. Use the following command to deploy the smart contracts:
       npx hardhat run --network localhost scripts/deploy.js
 
-###Note:
+### Note:
      If the terminal running the blockchain is closed, the blockchain will be destroyed.
 
-###Important Notes
+### Important Notes
      Pinata API Key
      Ensure the API key is active and not exhausted.
      Do not set the max_uses limit for the API key to avoid unexpected restrictions during uploads.
