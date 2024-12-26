@@ -24,41 +24,42 @@
 
 ---
 
-## Installation
+### Installation & Setup
+## 1. Uninstall Previous Hardhat Version (If Installed)
+      npm uninstall hardhat
+## 2. Install Specific Hardhat Version
+      npm install --save-dev hardhat@2.12.4 `
+## 3. Initialize Hardhat
+      npx hardhat
+## 4. Install Hardhat Toolbox
+      npm install --save-dev "hardhat@^2.12.4" "@nomicfoundation/hardhat-toolbox@^2.0.0"
+## 5. Create React App for Client
+      npm install create-react-app
+      npx create-react-app client
+      cd client
+## 6. Install Additional Dependencies
+      npm install --save-dev ajv@^7
+## 7. Start the Development Server
+      npm start
+      
+###Deployment
+##1. Deploy Smart Contracts
+##2. Ensure the blockchain is running locally. Use the following command to deploy the smart contracts:
+      npx hardhat run --network localhost scripts/deploy.js
+
+###Note:
+     If the terminal running the blockchain is closed, the blockchain will be destroyed.
+
+###Important Notes
+     Pinata API Key
+     Ensure the API key is active and not exhausted.
+     Do not set the max_uses limit for the API key to avoid unexpected restrictions during uploads.
+
 
 ### Prerequisites
 1. Node.js installed on your system.
 2. Metamask browser extension.
 3. Pinata account with API key and secret.
-
-### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/PinataVault.git
-   cd PinataVault
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Configure your Pinata API keys:
-   - Update the `pinata_api_key` and `pinata_secret_api_key` in `FileUpload.js`.
-
-4. Deploy the Smart Contract:
-   - Navigate to the `contracts` directory.
-   - Compile and deploy `Upload.sol` using a local Ethereum node or a test network (e.g., Hardhat or Remix).
-
-5. Update the contract address:
-   - Replace `contractAddress` in `App.js` with your deployed smart contract's address.
-
-6. Start the application:
-   ```bash
-   npm start
-   ```
-
-7. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
